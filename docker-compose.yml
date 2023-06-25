@@ -23,6 +23,7 @@ services:
       context: setup/
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
+    image: localhost/docker-elk_setup
     init: true
     volumes:
       - ./setup/entrypoint.sh:/entrypoint.sh:ro,Z
